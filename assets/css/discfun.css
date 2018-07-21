@@ -1,0 +1,9 @@
+
+.active, .collapsible:hover {
+    background-color: gold;
+}
+
+#track-list {
+    display: none;
+    overflow: hidden;
+}
