@@ -17,9 +17,9 @@ var queryPrefix = "http://www.theaudiodb.com/api/v1/json/" + keyAPI;
 $(document).ready(function () {
 
     //artist details AJAX
-    $("#navBarTop").on("click", "#navSearchBtn", function (event) {
+    $("#search-bar").on("click", "#search-button-submit", function (event) {
         event.preventDefault();
-        artistSearch = $("#navSearchInput").val().trim();
+        artistSearch = $("#myInput").val().trim();
         var artistDetailQuery = queryPrefix + "/search.php?s=" + artistSearch;
 
         $.ajax({
@@ -28,8 +28,9 @@ $(document).ready(function () {
         })
             .then(function (response) {
                 var results = response.artists[0];
-                // console.log(results);
+                console.log(results);
                 var artistName = results.strArtist;
+                $(".info-slot-image-name").text(artistName);
                 var artistThumb = results.strArtistThumb;
                 var artistBiography = results.strBiographyEN;
                 var artistGenre = results.strGenre;
@@ -58,7 +59,7 @@ $(document).ready(function () {
     // });
 
     // //album details AJAX
-    $("#navBarTop").on("click", "#navSearchBtn", function (event) {
+    $("#search-bar").on("click", "#search-button-submit", function (event) {
         event.preventDefault();
         var artistAudioDBIdQuery = queryPrefix + "/searchalbum.php?s=" + artistSearch;
 

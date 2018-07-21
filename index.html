@@ -1,118 +1,149 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-us">
 
 <head>
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+	<!-- Other meta tags -->
+	<title>MusicBot 9000</title>
+	<meta name="author" content="Group 3">
+	<meta name="description" content="Music artist search web app">
+
+	<!--Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Nunito|Viga" rel="stylesheet">
+
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
 	 crossorigin="anonymous">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-	<title>Hello, world!</title>
 </head>
 
 <body>
 
-	<!--search box-->
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="#">Navbar</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-		 aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
+	<div id="main-container">
 
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Home
-						<span class="sr-only">(current)</span>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Link</a>
-				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-					 aria-expanded="false">
-						Dropdown
-					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">Action</a>
-						<a class="dropdown-item" href="#">Another action</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#">Something else here</a>
+		<!--  Search Bar -->
+		<div id="search-bar" class="search-container clearfix">
+			<div id="search-button-submit" class="search-buttons br-left-button">
+				<i class="fa fa-search" aria-hidden="true"></i>
+			</div>
+			<input id="myInput" class="input-ol form-control striaght-box" type="text" placeholder="Search">
+			<div id="search-button-x" class="search-buttons br-right-button">X</div>
+		</div>
+
+		<!-- Info Box -->
+		<div id="info-box" class="info-slot-container">
+			<div class="info-slot-image">
+				<div class="info-slot-image-name">Artist Name</div>
+			</div>
+			<div class="info-slot-content">
+				<div class="info-row clearfix">
+					<div class="info-50 clearfix">
+						<div class="info-50-25">O</div>
+						<div class="info-50-75">Hip-Hop</div>
 					</div>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link disabled" href="#">Disabled</a>
-				</li>
-			</ul>
-			<form class="form-inline my-2 my-lg-0" id="navBarTop">
-				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="navSearchInput">
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="navSearchBtn">Search</button>
-			</form>
+					<div class="info-50 clearfix">
+						<div class="info-50-25">O</div>
+						<div class="info-50-75">21</div>
+					</div>
+				</div>
+				<div class="info-row clearfix">
+					<div class="info-50 clearfix">
+						<div class="info-50-25">O</div>
+						<div class="info-50-75">California</div>
+					</div>
+					<div class="info-50 clearfix">
+						<div class="info-50-25">O</div>
+						<div class="info-50-75">Something</div>
+					</div>
+				</div>
+				<div class="info-description">
+					<p class="info-desc-box">Description of the artist goes here. It's going to be pretty long, like probably longer than this. I'm going to keep typing
+					until I feel like it is long enough, which has not happened yet. Pretty soon, I would guess. Maybe now? No, perhaps
+					not. And yet just like that, it's over. Description of the artist goes here. It's going to be pretty long, like probably longer than this. I'm going to keep typing
+					until I feel like it is long enough, which has not happened yet. Pretty soon, I would guess. Maybe now? No, perhaps
+					not. And yet just like that, it's over. Description of the artist goes here. It's going to be pretty long, like probably longer than this. I'm going to keep typing
+					until I feel like it is long enough, which has not happened yet. Pretty soon, I would guess. Maybe now? No, perhaps
+					not. And yet just like that, it's over. Description of the artist goes here. It's going to be pretty long, like probably longer than this. I'm going to keep typing
+					until I feel like it is long enough, which has not happened yet. Pretty soon, I would guess. Maybe now? No, perhaps
+					not. And yet just like that, it's over. Description of the artist goes here. It's going to be pretty long, like probably longer than this. I'm going to keep typing
+					until I feel like it is long enough, which has not happened yet. Pretty soon, I would guess. Maybe now? No, perhaps
+					not. And yet just like that, it's over.</p>
+					<div class="read-more-button">Read More</div>
+				</div>
+			</div>
 		</div>
-	</nav>
 
-	<!--picture jumbotron-->
-	<div class="jumbotron jumbotron-fluid">
-		<div class="container">
-			<h1 class="display-4">Fluid jumbotron</h1>
-			<p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+
+
+		<!-- Discography -->
+		<div id="discography" class="discography-container">
+				<div class="slot-title">Discography</div>
+				<div class="slot-content-album">V  Album</div>
+				<div class="slot-content-song">Track</div>
+				<div class="slot-content-song">Track</div>
+				<div class="slot-content-song">Track</div>
+				<div class="slot-content-song">Track</div>
+				<div class="slot-content-song">Track</div>
+				<div class="slot-content-song">Track</div>
+				<div class="slot-content-song">Track</div>
+				<div class="slot-content-song">Track</div>
+				<div class="slot-content-album">^  Album</div>
+				<div class="slot-content-album">^  Album</div>
+			</div>
+	
+
+		<!-- YoutTube -->
+		<div class="show-container">
+				<div class="slot-title">Trending Video</div>
+				<div id="youtube-video"></div>
 		</div>
+
+		<!-- Ticketmaster -->
+		<div id="ticketmaster" class="show-container clearfix">
+			<div class="slot-title">Upcoming Show</div>
+			<div class="slot-content show-60-col">
+				<div id="show-title" class="show-text-title">Smokepurpp @ Ohm Nightclub 18+ W/ Special Guests</div>
+				<div id="show-venue" class="show-text">OHM Nightclub</div>
+				<div id="show-city" class="show-text">Los Angeles</div>
+				<div class="show-text"><span id="show-state">California</span><span id="show-country">US</span></div>
+				<div id="show-date" class="show-date">2018-07-19</div>
+
+			</div>
+			<div class="slot-content show-40-col">
+				<div class="show-image"></div>
+				<div class="show-buy-tickets">Buy Tickets</div>
+			</div>
+		</div>
+
+
+
+
+
+		<!-- New Card -->
+		<!-- <div class="slot-container">
+			<div class="slot-title">Title</div>
+			<div class="slot-content">Content</div>
+		</div> -->
+
 	</div>
 
-	<!--discography
-		year, album, singles/features, songs, ADD DROP DOWN
-		-->
-	<div class="container">
-		<div class="row">
-			<div class="col-sm">
-				One of three columns
-			</div>
-			<div class="col-sm">
-				One of three columns
-			</div>
-			<div class="col-sm">
-				One of three columns
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-sm">
-				One of three columns
-			</div>
-			<div class="col-sm">
-				One of three columns
-			</div>
-			<div class="col-sm">
-				One of three columns
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-sm">
-				One of three columns
-			</div>
-			<div class="col-sm">
-				One of three columns
-			</div>
-			<div class="col-sm">
-				One of three columns
-			</div>
-		</div>
-	</div>
-	<!--twitter tweet-->
 
 	<!--footer-->
+	<footer>
+
+		Sup its us
+
+	</footer>
 
 	<!-- Optional JavaScript -->
+
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" crossorigin="anonymous"></script>
