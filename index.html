@@ -1,10 +1,15 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-us">
 
 <head>
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Other meta tags -->
+	<title>MusicBot 9000</title>
+	<meta name="author" content="Group 3">
+	<meta name="description" content="Music artist search web app">
 
 	<!--Fonts-->
 	<link href="https://fonts.googleapis.com/css?family=Nunito|Viga" rel="stylesheet">
@@ -13,106 +18,132 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
 	 crossorigin="anonymous">
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-	<title>Hello, world!</title>
 </head>
 
 <body>
 
-	<!--search box-->
-	<div class="card powderblue">
-		<div class="row">
-			<div class="col-md-12">
-				<form id="search_form" onsubmit="return false;">
-					<div class="input-group">
-						<button class="btn btn-outline-primary btn-primary rounded" type="button" aria-label="Search">
-							<i class="fa fa-search" aria-hidden="true"></i>
-						</button>
-						<input id="myInput" type="text" class="input-ol form-control" name="query" placeholder="Search" />
-						<span class="input-group-btn" onclick="return searchcontent()">
-							<button class="btn btn-outline-primary btn-primary rounded" type="button" aria-label="X" onclick="document.getElementById('myInput').value = ''">X</button>
-						</span>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-	<!--info box-->
-	<div class="card">
-		<div class="container">
+	<div id="main-container">
 
-			<div class="row">
-				<div id="imageBox" class="col-12">
-					<div id="artistNameImage" class="titleFont">Artist Name</div>
+		<!--  Search Bar -->
+		<div id="search-bar" class="search-container clearfix">
+			<div id="search-button-submit" class="search-buttons br-left-button">
+				<i class="fa fa-search" aria-hidden="true"></i>
+			</div>
+			<input id="myInput" class="input-ol form-control striaght-box" type="text" placeholder="Search">
+			<div id="search-button-x" class="search-buttons br-right-button">X</div>
+		</div>
+
+		<!-- Info Box -->
+		<div id="info-box" class="info-slot-container">
+			<div class="info-slot-image">
+				<div class="info-slot-image-name">Artist Name</div>
+			</div>
+			<div class="info-slot-content">
+				<div class="info-row clearfix">
+					<div class="info-50 clearfix">
+						<div class="info-50-25">O</div>
+						<div class="info-50-75">Hip-Hop</div>
+					</div>
+					<div class="info-50 clearfix">
+						<div class="info-50-25">O</div>
+						<div class="info-50-75">21</div>
+					</div>
+				</div>
+				<div class="info-row clearfix">
+					<div class="info-50 clearfix">
+						<div class="info-50-25">O</div>
+						<div class="info-50-75">California</div>
+					</div>
+					<div class="info-50 clearfix">
+						<div class="info-50-25">O</div>
+						<div class="info-50-75">Something</div>
+					</div>
+				</div>
+				<div class="info-description">
+					<p class="info-desc-box">Description of the artist goes here. It's going to be pretty long, like probably longer than this. I'm going to keep typing
+					until I feel like it is long enough, which has not happened yet. Pretty soon, I would guess. Maybe now? No, perhaps
+					not. And yet just like that, it's over. Description of the artist goes here. It's going to be pretty long, like probably longer than this. I'm going to keep typing
+					until I feel like it is long enough, which has not happened yet. Pretty soon, I would guess. Maybe now? No, perhaps
+					not. And yet just like that, it's over. Description of the artist goes here. It's going to be pretty long, like probably longer than this. I'm going to keep typing
+					until I feel like it is long enough, which has not happened yet. Pretty soon, I would guess. Maybe now? No, perhaps
+					not. And yet just like that, it's over. Description of the artist goes here. It's going to be pretty long, like probably longer than this. I'm going to keep typing
+					until I feel like it is long enough, which has not happened yet. Pretty soon, I would guess. Maybe now? No, perhaps
+					not. And yet just like that, it's over. Description of the artist goes here. It's going to be pretty long, like probably longer than this. I'm going to keep typing
+					until I feel like it is long enough, which has not happened yet. Pretty soon, I would guess. Maybe now? No, perhaps
+					not. And yet just like that, it's over.</p>
+					<div class="read-more-button">Read More</div>
 				</div>
 			</div>
-			<div class="row">
-				<div id="artistGenre" class="col-6">Genre: Hip Hop</div>
-				<div id="artistAge" class="col-6">Age: 21</div>
-			</div>
-			<div class="row">
-				<div id="artistInfoX" class="col-6">Something: Info</div>
-				<div id="artistInfoY" class="col-6">Something: Info</div>
-			</div>
-			<div class="row">
-				<div id="artistDescription" class="col-12">Description goes here this dude was great or something he sang mysic and he did other things wow look at him go Jimmy!</div>
-			</div>
+		</div>
 
+
+
+		<!-- Discography -->
+		<div id="discography" class="discography-container">
+				<div class="slot-title">Discography</div>
+				<div class="slot-content-album">V  Album</div>
+				<div class="slot-content-song">Track</div>
+				<div class="slot-content-song">Track</div>
+				<div class="slot-content-song">Track</div>
+				<div class="slot-content-song">Track</div>
+				<div class="slot-content-song">Track</div>
+				<div class="slot-content-song">Track</div>
+				<div class="slot-content-song">Track</div>
+				<div class="slot-content-song">Track</div>
+				<div class="slot-content-album">^  Album</div>
+				<div class="slot-content-album">^  Album</div>
+			</div>
+	
+
+		<!-- YoutTube -->
+		<div class="show-container">
+				<div class="slot-title">Trending Video</div>
+				<div id="youtube-video"></div>
 		</div>
-	</div>
-	<!--discography
-		year, album, singles/features, songs, ADD DROP DOWN
-		-->
-	<div class="card">
-		<div class="card-header marginbottom">
-			<h3>Discography</h3>
+
+		<!-- Ticketmaster -->
+		<div id="ticketmaster" class="show-container clearfix">
+			<div class="slot-title">Upcoming Show</div>
+			<div class="slot-content show-60-col">
+				<div id="show-title" class="show-text-title">Smokepurpp @ Ohm Nightclub 18+ W/ Special Guests</div>
+				<div id="show-venue" class="show-text">OHM Nightclub</div>
+				<div id="show-city" class="show-text">Los Angeles</div>
+				<div class="show-text"><span id="show-state">California</span><span id="show-country">US</span></div>
+				<div id="show-date" class="show-date">2018-07-19</div>
+
+			</div>
+			<div class="slot-content show-40-col">
+				<div class="show-image"></div>
+				<div class="show-buy-tickets">Buy Tickets</div>
+			</div>
 		</div>
-		<div class="card-body">
-			<blockquote class="blockquote mb-0">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-				<footer class="blockquote-footer">Someone famous in
-					<cite title="Source Title">Source Title</cite>
-				</footer>
-			</blockquote>
-		</div>
+
+
+
+
+
+		<!-- New Card -->
+		<!-- <div class="slot-container">
+			<div class="slot-title">Title</div>
+			<div class="slot-content">Content</div>
+		</div> -->
+
 	</div>
 
-	<!--next show-->
-	<div class="card">
-		<div class="card-header">
-			<h3>Next Show</h3>
-		</div>
-		<div class="card-body">
-			<blockquote class="blockquote mb-0">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-				<footer class="blockquote-footer">Someone famous in
-					<cite title="Source Title">Source Title</cite>
-				</footer>
-			</blockquote>
-		</div>
-	</div>
-	<!--twitter tweet-->
-
-	<div class="card">
-		<div class="card-header">
-			<h3>Twitter</h3>
-		</div>
-		<div class="card-body">
-			<blockquote class="blockquote mb-0">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-				<footer class="blockquote-footer">Someone famous in
-					<cite title="Source Title">Source Title</cite>
-				</footer>
-			</blockquote>
-		</div>
-	</div>
 
 	<!--footer-->
+	<footer>
+
+		Sup its us
+
+	</footer>
 
 	<!-- Optional JavaScript -->
+
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" crossorigin="anonymous"></script>
