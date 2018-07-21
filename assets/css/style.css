@@ -2,9 +2,13 @@
 
 /* Variables, Clearfix, Box-Sizing */
 :root {
-	--primaryColor: #4FBAC8;
-	--secondaryColor: #b0e0e6;
-	--accentColor: #c84fba;
+	--primaryColor: #2D62A3;
+	--primaryColorDark: #1c3e67;
+	--primaryColorLight: #4e88ce;
+	--secondaryColor: #5f4b8b;
+	--secondaryColorLight: #8570b2;
+	--accentColor: #E47127;
+	--accentColorLight: #ea8f54;
 	--softWhiteColor: #F7F7F0;
 	--softBlackColor: #212121;
 	--softGreyColor: #d2d2d2;
@@ -32,7 +36,7 @@ body {
 }
 
 #main-container {
-	width: 95%;
+	width: 92%;
 	margin: 0 auto;
 }
 
@@ -57,16 +61,16 @@ body {
 
 #myInput {
 	float: left;
-	border: 1px solid var(--darkGreyColor);
+	border: 1px solid var(--secondaryColorLight);
 }
 
 .search-buttons {
 	text-align: center;
-	line-height: 38px;
+	line-height: 37px;
 	height: 38px;
 	width: 10%;
-	border: 1px solid var(--darkGreyColor);
-	background-color: var(--darkGreyColor); 
+	border: 1px solid var(--secondaryColorLight);
+	background-color: var(--secondaryColorLight); 
 	color: var(--softWhiteColor); 
 	float: left;
 }
@@ -92,7 +96,7 @@ body {
 
 
 .info-slot-container {
-	border: 1px solid var(--darkGreyColor);
+	border: 3px solid var(--secondaryColorLight);
 	border-radius: 4px;
 	background-color: var(--softWhiteColor);
 	margin-top: 10px;
@@ -103,7 +107,7 @@ body {
 	background-image: url("http://thesource.com/wp-content/uploads/2018/06/Post-Malone-Invites-The-Undertaker-to-Smash-Guitars-During-Rockstar-Performance.jpg");
 	background-size: cover;
 	background-position: top;
-	border-radius: 3px 3px 0 0;
+	border-radius: 2px 2px 0 0;
 }
 
 .info-slot-image-name {
@@ -161,6 +165,8 @@ body {
 
 
 
+
+
 #youtube-video {
 	margin: 0 auto;
 	text-align: center;
@@ -195,14 +201,14 @@ body {
 
 .show-buy-tickets {
 	text-align: center;
-	font-size: 16px;
-	line-height: 16px;
+	font-size: 14px;
+	line-height: 14px;
 	padding: 7px;
 	width: 100%;
 	border-radius: 3px;
-	border: 3px solid var(--primaryColor);
-	background-color: var(--secondaryColor);
-	color: var(--softBlackColor);
+	border: 3px solid var(--secondaryColor);
+	background-color: var(--secondaryColorLight);
+	color: var(--softWhiteColor);
 }
 
 .show-text {
@@ -229,7 +235,7 @@ body {
 
 
 .discography-container {
-	border: 1px solid var(--darkGreyColor);
+	border: 3px solid var(--secondaryColorLight);
 	border-radius: 4px;
 	background-color: var(--softWhiteColor);
 	padding: 10px 20px 20px 20px;
@@ -238,15 +244,15 @@ body {
 
 .show-container {
 	padding: 10px 20px 10px 20px;
-	border: 1px solid var(--darkGreyColor);
+	border: 3px solid var(--secondaryColorLight);
 	border-radius: 4px;
 	background-color: var(--softWhiteColor);
 	margin-top: 10px;
 }
 
 .slot-title {
-	color: var(--accentColor);
-	text-shadow:  1px 1px 0 var(--softBlackColor);
+	color: var(--primaryColorLight);
+	text-shadow:  1px 1px 0 var(--primaryColorDark);
 	font-family: 'Viga', sans-serif;
 	font-size: 28px;
 	margin-bottom: 10px;
@@ -294,17 +300,21 @@ body {
 
 
 
+
+
+
+
 footer {
 	width: 100%;
 	height: 46px;
 	line-height: 50px;
-	background-color: var(--darkGreyColor);
+	background-color: var(--secondaryColorLight);
 	color: var(--softWhiteColor);
 	font-family: 'Viga', sans-serif;
 	font-size: 10px;
 	text-align: center;
 	margin-top: 20px;
-	border: 1px solid var(--darkGreyColor);
+	border: 1px solid var(--secondaryColorLight);
 }
 
 /* Media Queries */
