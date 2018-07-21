@@ -316,3 +316,74 @@ footer {
 	margin-top: 20px;
 	border: 1px solid var(--secondaryColorLight);
 }
+
+/* Media Queries */
+
+/* Portrait view media queries for 376px (min) to 980px (max) */
+
+@media only screen and (max-width:768px) and (min-width:376px) and (orientation : portrait) {
+
+	body {
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+
+	.info-slot-image {
+		/* background-position: inherit; */
+		background-size: auto;
+	}
+
+
+}
+
+@media only screen and (max-width: 980px) and (min-width:769px) and (orientation : portrait) {
+
+	body {
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+
+	.info-slot-image {
+		/* background-position: inherit; */
+		background-size: auto;
+	}
+
+}
+
+/* Media Query for average Desktop/"very large screen" */
+
+@media only screen and (min-width:981px) {
+
+	body {
+		margin-left: 20%;
+		margin-right: 20%;
+		overflow: scroll;
+		background: url("https://media.giphy.com/media/xT8qB6DTAn4wLbd7Py/giphy.gif");
+		background-size: cover;
+	}
+
+	/* applying margins to all children of #main-container */
+
+	#main-container > * {
+		margin-top: 2%;
+		margin-bottom: 2%;
+	}
+
+	#all-content {
+		background-color: rgba(128, 223, 247, 0.623);
+		/* background-color: var(--secondaryColor); */
+		
+	}
+
+	.info-slot-image {
+		background-size: cover;
+	}
+
+}
+
+
+/* notes */
+
+/* and (orientation : portrait) */
+
+/* and (orientation : landscape) */
