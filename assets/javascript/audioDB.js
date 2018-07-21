@@ -33,9 +33,13 @@ $(document).ready(function () {
                 $(".info-slot-image-name").text(artistName);
                 var artistThumb = results.strArtistThumb;
                 var artistBiography = results.strBiographyEN;
+                $(".info-desc-box").text(artistBiography);
                 var artistGenre = results.strGenre;
+                $(".genre").text(artistGenre);
                 var artistOrigin = results.strCountry;
+                $(".artist-origin").text(artistOrigin)
                 var artistStartYear = results.intFormedYear;
+                $(".artist-start-year").text(artistStartYear);
             })
     });
 
@@ -87,6 +91,11 @@ $(document).ready(function () {
                             albumIdCoverURL.push(results[i].strAlbumThumb);
                             albumIdReleaseYearArray.push(results[i].intYearReleased);
                             albumIdTitleArray.push(results[i].strAlbum);
+                            for (i = 0; i < albumIdTitleArray.length; i++) {
+                                var newAlbumDiv = $("<div>");
+                                newAlbumDiv.text(albumIdTitleArray[i]);
+                                
+                            }
                         }
                         for (i = 0; i < albumIdArray.length; i++) {
                             var albumTrackQuery = queryPrefix + "/track.php?m=" + albumIdArray[i];
