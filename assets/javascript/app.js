@@ -28,7 +28,7 @@ $("#search-button-submit").on("click", function (event) {
         method: "GET",
     }).then(function (response) {
         
-        console.log(response);
+        // console.log(response);
         var event = response._embedded.events[0];
         var eName = response._embedded.events[0].name;
         var eDate = response._embedded.events[0].dates.start.localDate;
@@ -70,7 +70,7 @@ $("#search-button-submit").on("click", function (event) {
         url: `http://www.theaudiodb.com/api/v1/json/195003/search.php?s=${searchNamePlus}`,
         method: "GET",
     }).then(function (response) {
-        console.log(response);
+        // console.log(response);
         var artistName = response.artists[0].strArtist;
         var artistThumbURL = response.artists[0].strArtistThumb;
         var artistDesc = response.artists[0].strBiographyEN;

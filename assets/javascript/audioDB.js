@@ -10,7 +10,6 @@ var albumIdArray = [];
 var albumIdTitleArray = [];
 var albumIdReleaseYearArray = [];
 var albumIdCoverURL = [];
-var trackListById = [];
 
 var queryPrefix = "http://www.theaudiodb.com/api/v1/json/" + keyAPI;
 
@@ -28,7 +27,7 @@ $(document).ready(function () {
         })
             .then(function (response) {
                 var results = response.artists[0];
-                console.log(results);
+                // console.log(results);
                 var artistName = results.strArtist;
                 $(".info-slot-image-name").text(artistName);
                 var artistThumb = results.strArtistThumb;
@@ -40,6 +39,8 @@ $(document).ready(function () {
                 $(".artist-origin").text(artistOrigin)
                 var artistStartYear = results.intFormedYear;
                 $(".artist-start-year").text(artistStartYear);
+                var artistMusicMood = results.strMood;
+                $(".music-mood").text(artistMusicMood);
             })
     });
 
@@ -91,33 +92,51 @@ $(document).ready(function () {
                             albumIdCoverURL.push(results[i].strAlbumThumb);
                             albumIdReleaseYearArray.push(results[i].intYearReleased);
                             albumIdTitleArray.push(results[i].strAlbum);
-                            for (i = 0; i < albumIdTitleArray.length; i++) {
-                                var newAlbumDiv = $("<div>");
-                                newAlbumDiv.text(albumIdTitleArray[i]);
-                                
-                            }
                         }
-                        for (i = 0; i < albumIdArray.length; i++) {
-                            var albumTrackQuery = queryPrefix + "/track.php?m=" + albumIdArray[i];
 
-                            $.ajax({
-                                url: albumTrackQuery,
-                                method: "GET"
-                            })
-
-                                //this pushes track names to arrays
-                                .then(function (response) {
-                                    // console.log(response);
-                                    var results = response.track;
-                                    for (i = 0; i < response.length; i++) {
-                                        var trackList = [];
-                                        trackList.push(results[i].strTrack);
-                                        trackListById.push(trackList);
-                                        console.log(trackListById);
-                                    }
-                                })
-                        }
+                        renderAlbums();
                     })
             })
     });
+});
+
+function renderAlbums() {
+    //for each album...
+    for (var i = 0; i < albumIdTitleArray.length; i++) {
+        var newAlbumDiv = $("<div>");
+        newAlbumDiv.addClass("slot-content-album")
+        newAlbumDiv.attr("data-coverURL", albumIdCoverURL[i]);
+        var albumTrackQuery = queryPrefix + "/track.php?m=" + albumIdArray[i];
+        newAlbumDiv.attr("data-query", albumTrackQuery);
+        newAlbumDiv.text(albumIdTitleArray[i]);
+        $("#discography").append(newAlbumDiv);
+    }
+};
+
+$("#discography").on("click", ".slot-content-album", function (event) {
+    event.preventDefault();
+    var albumTrackQuery = $(this).attr("data-query");
+    var albumDiv = $(this);
+    var trackContainer = $("<div>");
+    trackContainer.addClass("expandable-album");
+    albumDiv.append(trackContainer);
+
+    $.ajax({
+        url: albumTrackQuery,
+        method: "GET"
+    })
+
+        //this generates track names into expandable track container
+        .then(function (response) {
+            // console.log(response);
+            var results = response.track;
+            console.log(results);
+            //for each track...
+            for (var ii = 0; ii < results.length; ii++) {
+                var newTrack = $("<div>");
+                newTrack.addClass("slot-content-song");
+                newTrack.text(results[ii].strTrack);
+                trackContainer.append(newTrack);
+            }
+        })
 });
