@@ -147,11 +147,28 @@ body {
 }
 
 .info-description {
-	max-height: 100px;
-	overflow: hidden;
 	margin-top: 10px;
 	font-size: 12px;
 	line-height: 14px;
+}
+
+.info-desc-button {
+    width: 100%;
+    height: 30px;
+	text-align: center;
+    font-size: 14px;
+    line-height: 12px;
+    padding: 7px;
+    border-radius: 3px;
+    border: 3px solid var(--secondaryColor);
+    background-color: var(--secondaryColorLight);
+    color: var(--softWhiteColor);
+}
+
+.info-desc-box {
+	width: 95%;
+	margin: 0 auto;
+	margin-top: 10px;
 }
 
 .read-more-button {
