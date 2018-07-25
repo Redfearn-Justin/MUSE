@@ -1,9 +1,10 @@
 
-.active, .collapsible:hover {
+.slot-content-album:hover {
     background-color: gold;
 }
 
-#track-list {
-    display: none;
+.expandable-album {
+    display: block;
     overflow: hidden;
 }
+

@@ -1,14 +1,16 @@
-var coll = document.getElementsByClassName("slot-content-album");
-var i;
+var albumNameButton = $(".slot-content-album");
 
-for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.display === "block") {
-            content.style.display = "none";
-        } else {
-            content.style.display = "block";
-        }
-    });
-}
+$("#discography").on("click", ".slot-content-album", function (event) {
+    var trackExpand = $(this).attr("data-expand")
+    var content = $(this).children();
+    if (trackExpand === "expanded") {
+        // console.log("collapsing");
+        $(this).attr("data-expand", "collapsed");
+        content.css("display", "none");
+    }
+    else {
+        $(this).attr("data-expand", "expanded");
+        // console.log("expanding");
+        content.css("display", "block");
+    }
+});
