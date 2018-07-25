@@ -1,0 +1,90 @@
+/* Splash Screen */
+
+#splash-screen {
+	background-image: url(../images/splash-portrait-singer.jpg);
+	background-size: cover;
+	background-position: center;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	z-index: 1000;
+	top: 0;
+    left: 0;
+    text-align: center;
+}
+
+#black-shadow {
+	background-color: #5f4b8b;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+    z-index: 1000;
+    opacity: 0.2;
+	top: 0;
+	left: 0;
+}
+
+#splash-logo {
+    margin: 0 auto;
+    margin-top: 10%;
+    background-color: #8570b2;
+    border-radius: 5px;
+    text-align: 0 auto;
+    height: 80px;
+    width: 80px;
+    line-height: 50px;
+    color: white;
+    box-shadow: 0 0 8px #000;
+}
+
+#splash-title {
+    position: relative;
+    z-index: 1001;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-size: 8vmin;
+    line-height: 10vmin;
+    color: white;
+    text-align: center;
+    text-shadow: 0 2px 10px #202020;
+}
+
+
+@media only screen and (max-width:813px) {
+
+    #splash-screen {
+        background-image: url(../images/splash-vertical-blue.jpg);
+    }
+
+    #black-shadow {
+        background-color: #000;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        z-index: 1000;
+        opacity: 0.1;
+        top: 0;
+        left: 0;
+    }
+
+    #splash-title {
+        font-size: 8vmin;
+        font-size: 10vmin;
+        line-height: 10vmin;
+        text-shadow: 0 2px 5px #202020;
+    }
+
+    #splash-logo {
+        margin: 0 auto;
+        margin-top: 15%;
+        background-color: #8570b2;
+        border-radius: 5px;
+        text-align: 0 auto;
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        color: white;
+        box-shadow: 0 0 5px #202020;
+    }
+
+}
