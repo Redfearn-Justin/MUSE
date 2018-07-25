@@ -109,34 +109,40 @@ function renderAlbums() {
         var albumTrackQuery = queryPrefix + "/track.php?m=" + albumIdArray[i];
         newAlbumDiv.attr("data-query", albumTrackQuery);
         newAlbumDiv.text(albumIdTitleArray[i]);
+        newAlbumDiv.attr("data-state", "not-rendered");
         $("#discography").append(newAlbumDiv);
     }
 };
 
 $("#discography").on("click", ".slot-content-album", function (event) {
     event.preventDefault();
-    var albumTrackQuery = $(this).attr("data-query");
-    var albumDiv = $(this);
-    var trackContainer = $("<div>");
-    trackContainer.addClass("expandable-album");
-    albumDiv.append(trackContainer);
+        var state = $(this).attr("data-state");
+    if (state === "not-rendered") {
+        var albumTrackQuery = $(this).attr("data-query");
+        var albumDiv = $(this);
+        var trackContainer = $("<div>");
+        trackContainer.addClass("expandable-album");
+        $(this).attr("data-state", "rendered");
+        $(this).attr("data-expand", "collapsed");
+        albumDiv.append(trackContainer);
 
-    $.ajax({
-        url: albumTrackQuery,
-        method: "GET"
-    })
-
-        //this generates track names into expandable track container
-        .then(function (response) {
-            // console.log(response);
-            var results = response.track;
-            console.log(results);
-            //for each track...
-            for (var ii = 0; ii < results.length; ii++) {
-                var newTrack = $("<div>");
-                newTrack.addClass("slot-content-song");
-                newTrack.text(results[ii].strTrack);
-                trackContainer.append(newTrack);
-            }
+        $.ajax({
+            url: albumTrackQuery,
+            method: "GET"
         })
+
+            //this generates track names into expandable track container
+            .then(function (response) {
+                // console.log(response);
+                var results = response.track;
+                // console.log(results);
+                //for each track...
+                for (var ii = 0; ii < results.length; ii++) {
+                    var newTrack = $("<div>");
+                    newTrack.addClass("slot-content-song");
+                    newTrack.text(results[ii].strTrack);
+                    trackContainer.append(newTrack);
+                }
+            })
+    }
 });
