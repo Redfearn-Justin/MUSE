@@ -28,6 +28,7 @@ $("#search-button-submit").on("click", function (event) {
     $("#no-news").empty();
     $("#show-content-for-hide").show();
     $("#news-content-for-hide").show();
+    $("#discography").empty();
 
     var value = $("#myInput").val().trim();
     searchName = value
