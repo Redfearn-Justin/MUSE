@@ -25,7 +25,9 @@ $("#search-button-submit").on("click", function (event) {
     event.preventDefault();
 
     $("#no-upcoming-show").empty();
+    $("#no-news").empty();
     $("#show-content-for-hide").show();
+    $("#news-content-for-hide").show();
 
     var value = $("#myInput").val().trim();
     searchName = value
@@ -110,20 +112,26 @@ $("#search-button-submit").on("click", function (event) {
         method: "GET",
     }).then(function (response) {
 
-        var nTitle = response.articles[0].title;
-        var nDesc = response.articles[0].description;
-        var nSource = response.articles[0].source.name;
-        var nImage = response.articles[0].urlToImage;
-        newsGoToURL = response.articles[0].url;
+        if (response.totalResults == 0) {
+            $("#no-news").html("Sorry, no recent news for this artist!");
+            $("#news-content-for-hide").hide();
+        } else {
+            console.log(response);
+            var nTitle = response.articles[0].title;
+            var nDesc = response.articles[0].description;
+            var nSource = response.articles[0].source.name;
+            var nImage = response.articles[0].urlToImage;
+            newsGoToURL = response.articles[0].url;
 
-        $("#news-title").empty();
-        $("#news-desc").empty();
-        $("#news-source").empty();
-        $("#news-title").append(nTitle);
-        $("#news-desc").append(nDesc);
-        $("#news-source").append(nSource);
+            $("#news-title").empty();
+            $("#news-desc").empty();
+            $("#news-source").empty();
+            $("#news-title").append(nTitle);
+            $("#news-desc").append(nDesc);
+            $("#news-source").append(nSource);
 
-        $(".news-image").css("background-image", `url("${nImage}")`);
+            $(".news-image").css("background-image", `url("${nImage}")`);
+        }
 
     });
 
