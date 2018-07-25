@@ -27,105 +27,137 @@
 
 <body>
 
-  <div id="all-content">
+	<div id="all-content">
 
-	<div id="main-container">
+		<div id="main-container">
 
-		<!--  Search Bar -->
-		<div id="search-bar" class="search-container clearfix">
-			<div id="search-button-submit" class="search-buttons br-left-button">
-				<i class="fa fa-search" aria-hidden="true"></i>
+			<!--  Search Bar -->
+			<div id="search-bar" class="search-container clearfix">
+				<div id="search-button-submit" class="search-buttons br-left-button">
+					<i class="fa fa-search" aria-hidden="true"></i>
+				</div>
+				<input id="myInput" class="input-ol form-control striaght-box" type="text" placeholder="Search">
+				<div id="search-button-x" class="search-buttons br-right-button">X</div>
 			</div>
-			<input id="myInput" class="input-ol form-control striaght-box" type="text" placeholder="Search">
-			<div id="search-button-x" class="search-buttons br-right-button">X</div>
-		</div>
 
-		<!-- Info Box -->
-		<div id="info-box" class="info-slot-container">
-			<div class="info-slot-image">
-				<div class="info-slot-image-name">Artist Name</div>
-			</div>
-			<div class="info-slot-content">
-				<div class="info-row clearfix">
-					<div class="info-50 clearfix">
-						<div class="info-50-25">O</div>
-						<div class="info-50-75 genre">placeholder</div>
+			<!-- Info Box -->
+			<div id="info-box" class="info-slot-container">
+				<div class="info-slot-image">
+					<div class="info-slot-image-name">Artist Name</div>
+				</div>
+				<div class="info-slot-content">
+					<div class="info-row clearfix">
+						<div class="info-50 clearfix">
+							<div class="info-50-25">O</div>
+							<div class="info-50-75 genre">placeholder</div>
+						</div>
+						<div class="info-50 clearfix">
+							<div class="info-50-25">O</div>
+							<div class="info-50-75 artist-start-year">placeholder</div>
+						</div>
 					</div>
-					<div class="info-50 clearfix">
-						<div class="info-50-25">O</div>
-						<div class="info-50-75 artist-start-year">placeholder</div>
+					<div class="info-row clearfix">
+						<div class="info-50 clearfix">
+							<div class="info-50-25">O</div>
+							<div class="info-50-75 artist-origin">placeholder</div>
+						</div>
+						<div class="info-50 clearfix">
+							<div class="info-50-25">O</div>
+							<div class="info-50-75 music-mood">placeholder</div>
+						</div>
+					</div>
+					<div class="info-description">
+						<div class="info-desc-button">Artist Description</div>
+						<div id="desc-list">
+							<div class="info-desc-box">Placeholder description of the artist goes here. It's going to be pretty long, like probably longer than this. I'm
+								going to keep typing until I feel like it is long enough, which has not happened yet. Pretty soon, I would guess.
+								Maybe now? No, perhaps not. And yet just like that, it's over. Description of the artist goes here. It's going to
+								be pretty long, like probably longer than this. I'm going to keep typing until I feel like it is long enough, which
+								has not happened yet. Pretty soon, I would guess. Maybe now? No, perhaps not. And yet just like that, it's over.
+								Description of the artist goes here. It's going to be pretty long, like probably longer than this. I'm going to keep
+								typing until I feel like it is long enough, which has not happened yet. Pretty soon, I would guess. Maybe now? No,
+								perhaps not. And yet just like that, it's over.</div>
+						</div>
+
 					</div>
 				</div>
-				<div class="info-row clearfix">
-					<div class="info-50 clearfix">
-						<div class="info-50-25">O</div>
-						<div class="info-50-75 artist-origin">placeholder</div>
+			</div>
+
+			<!-- Discography -->
+			<div id="discography" class="discography-container clearfix">
+				<div class="slot-title discography-header">Discography</div>
+			</div>
+
+
+			<!-- YoutTube -->
+			<div class="show-container clearfix">
+				<div class="slot-title">Trending Video</div>
+				<div id="youtube-video"></div>
+			</div>
+
+			<!-- News API -->
+			<div class="news-container clearfix">
+				<div class="slot-title">In The News</div>
+				<div id="no-news" class="show-text-title centered-text"></div>
+				<div id="news-content-for-hide">
+					<div id="news-box">
+						<div id="news-title" class="show-text-title">Smokepurpp @ Ohm Nightclub 18+ W/ Special Guests</div>
+						<div class="slot-content show-60-col">
+							<div id="news-desc" class="show-text"></div>
+							<div id="news-source" class="show-date"></div>
+						</div>
+						<div class="slot-content show-40-col">
+							<div class="news-image"></div>
+							<div class="news-go-to-article">Go To Article</div>
+						</div>
 					</div>
-					<div class="info-50 clearfix">
-						<div class="info-50-25">O</div>
-						<div class="info-50-75 music-mood">placeholder</div>
+				</div>
+			</div>
+
+			<!-- Ticketmaster -->
+			<div id="ticketmaster" class="show-container clearfix">
+				<div class="slot-title">Upcoming Show</div>
+				<div id="no-upcoming-show" class="show-text-title centered-text"></div>
+				<div id="show-content-for-hide">
+					<div class="slot-content show-60-col">
+						<div id="show-title" class="show-text-title">Smokepurpp @ Ohm Nightclub 18+ W/ Special Guests</div>
+						<div id="show-venue" class="show-text">OHM Nightclub</div>
+						<div id="show-city" class="show-text">Los Angeles</div>
+						<div class="show-text">
+							<span id="show-state">California</span>
+							<span id="show-country">US</span>
+						</div>
+						<div id="show-date" class="show-date">2018-07-19</div>
+
+					</div>
+					<div class="slot-content show-40-col">
+						<div class="show-image"></div>
+						<div class="show-buy-tickets">Buy Tickets</div>
 					</div>
 				</div>
-				<div class="info-description">
-					<p class="info-desc-box">placeholder</p>
-					<div class="read-more-button">Read More</div>
-				</div>
 			</div>
-		</div>
-
-		<!-- Discography -->
-		<div id="discography" class="discography-container">
-			<div class="slot-title discography-header">Discography</div>
-		</div>
-
-
-		<!-- YoutTube -->
-		<div class="show-container">
-			<div class="slot-title">Trending Video</div>
-			<div id="youtube-video"></div>
-		</div>
-
-		<!-- Ticketmaster -->
-		<div id="ticketmaster" class="show-container clearfix">
-			<div class="slot-title">Upcoming Show</div>
-			<div class="slot-content show-60-col">
-				<div id="show-title" class="show-text-title">Smokepurpp @ Ohm Nightclub 18+ W/ Special Guests</div>
-				<div id="show-venue" class="show-text">OHM Nightclub</div>
-				<div id="show-city" class="show-text">Los Angeles</div>
-				<div class="show-text">
-					<span id="show-state">California</span>
-					<span id="show-country">US</span>
-				</div>
-				<div id="show-date" class="show-date">2018-07-19</div>
-
-			</div>
-			<div class="slot-content show-40-col">
-				<div class="show-image"></div>
-				<div class="show-buy-tickets">Buy Tickets</div>
-			</div>
-		</div>
 
 
 
 
 
-		<!-- New Card -->
-		<!-- <div class="slot-container">
+			<!-- New Card -->
+			<!-- <div class="XXXXX-container">
 			<div class="slot-title">Title</div>
 			<div class="slot-content">Content</div>
 		</div> -->
 
+		</div>
+
+
+		<!--footer-->
+		<footer>
+
+			©
+
+		</footer>
+
 	</div>
-
-
-	<!--footer-->
-	<footer>
-
-		©
-
-	</footer>
-	
-  </div>
 
 	<!-- Optional JavaScript -->
 
