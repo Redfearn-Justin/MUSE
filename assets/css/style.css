@@ -319,40 +319,87 @@ footer {
 
 /* Media Queries */
 
-/* Portrait view media queries for 376px (min) to 980px (max) */
 
-@media only screen and (max-width:768px) and (min-width:376px) and (orientation : portrait) {
+/* smartphone media queries */
+
+@media only screen and (max-width:480px) and (min-width:320px) {
+
+	/* JR: consider deleting directly below line */
+
+	#info-box, #discography, .show-container {
+		box-shadow: 3px 4px 5px inset var(--primaryColor);
+	}
+
+	#info-box:hover, #discography:hover, .show-container:hover {
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
 
 	body {
-		margin-left: 10%;
-		margin-right: 10%;
+		margin-left: 1%;
+		margin-right: 1%;
+		background: var(--softGreyColor);
+	}
+
+	.show-container {
+		margin-left: 4%;
+		margin-right: 4%;
 	}
 
 	.info-slot-image {
-		/* background-position: inherit; */
-		background-size: auto;
+		background-size: cover;
+	}
+
+	#info-box, #discography, .show-container {
+		margin-top: 4%;
+		margin-bottom: 4%;
+	}
+	#search-container {
+		margin-bottom: 3%;
 	}
 
 
 }
 
-@media only screen and (max-width: 980px) and (min-width:769px) and (orientation : portrait) {
+/* tablet media queries */
+
+@media only screen and (max-width: 991px) and (min-width:481px) {
+
+
+	#info-box, #discography, .show-container {
+		box-shadow: 3px 4px 5px inset var(--primaryColor);
+	}
+
+	#info-box:active, #discography:active, .show-container:active {
+		box-shadow: 0 4px 8px 0 var(--softWhiteColor), 0 6px 20px 0 var(--softGreyColor);
+	}
 
 	body {
-		margin-left: 10%;
-		margin-right: 10%;
+		margin-left: 5%;
+		margin-right: 5%;
+		background: var(--softBlackColor);
+	}
+
+	.show-container {
+		margin-left: 4%;
+		margin-right: 4%;
 	}
 
 	.info-slot-image {
-		/* background-position: inherit; */
-		background-size: auto;
+		background-size: cover;
 	}
 
+	#info-box, #discography, .show-container {
+		margin-top: 4%;
+		margin-bottom: 4%;
+	}
+	#search-container {
+		margin-bottom: 3%;
+	}
 }
 
-/* Media Query for average Desktop/"very large screen" */
+/* desktop media queries */
 
-@media only screen and (min-width:981px) {
+@media only screen and (min-width:992px) {
 
 	body {
 		margin-left: 20%;
@@ -362,17 +409,22 @@ footer {
 		background-size: cover;
 	}
 
-	/* applying margins to all children of #main-container */
+	/* JR: .show-container elements would not size like rest; below fixed that */
 
-	#main-container > * {
-		margin-top: 2%;
-		margin-bottom: 2%;
+	.show-container {
+		width: 92%;
+		margin-left: 4%;
+		margin-right: 4%;
+	}
+
+	#info-box, #discography, .show-container {
+		margin-top: 4%;
+		margin-bottom: 4%;
 	}
 
 	#all-content {
 		background-color: rgba(128, 223, 247, 0.623);
 		/* background-color: var(--secondaryColor); */
-		
 	}
 
 	.info-slot-image {
@@ -383,6 +435,12 @@ footer {
 
 
 /* notes */
+
+/* see if pseudo-elements actually work w/ mobile */
+
+/* use 'parallax scroll' effect on desktop (or even tablet)? */
+
+/* maybe with each 'section of scrolling' a new picture of the band shows? */
 
 /* and (orientation : portrait) */
 
