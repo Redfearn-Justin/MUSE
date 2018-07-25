@@ -1,10 +1,5 @@
-
-.active, .collapsible:hover {
-    background-color: #8570b2;
-}
-
-#track-list {
-    display: none;
+.expandable-album {
+    display: block;
     overflow: hidden;
 }
 
