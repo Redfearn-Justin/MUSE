@@ -1,9 +1,14 @@
 
 .active, .collapsible:hover {
-    background-color: gold;
+    background-color: #8570b2;
 }
 
 #track-list {
+    display: none;
+    overflow: hidden;
+}
+
+#desc-list {
     display: none;
     overflow: hidden;
 }
