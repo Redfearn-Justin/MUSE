@@ -106,21 +106,21 @@ function searchButton() {
 
 
     // AudioDB API AJAX Call (For Artist Info)
-    // $.ajax({
-    //     url: `http://www.theaudiodb.com/api/v1/json/195003/search.php?s=${searchNamePlus}`,
-    //     method: "GET",
-    // }).then(function (response) {
+    $.ajax({
+        url: `http://www.theaudiodb.com/api/v1/json/195003/search.php?s=${searchNamePlus}`,
+        method: "GET",
+    }).then(function (response) {
 
-    //     var artistName = response.artists[0].strArtist;
-    //     var artistThumbURL = response.artists[0].strArtistThumb;
-    //     var artistDesc = response.artists[0].strBiographyEN;
+        var artistName = response.artists[0].strArtist;
+        var artistThumbURL = response.artists[0].strArtistThumb;
+        var artistDesc = response.artists[0].strBiographyEN;
 
 
-    //     $(".info-slot-image").css("background-image", `url("${artistThumbURL}")`);
-    //     $(".info-slot-image-name").text(artistName);
-    //     $(".info-desc-box").text(artistDesc);
+        $(".info-slot-image").css("background-image", `url("${artistThumbURL}")`);
+        $(".info-slot-image-name").text(artistName);
+        $(".info-desc-box").text(artistDesc);
 
-    // });
+    });
 
 
     // NewsAPI AJAX Call
@@ -225,21 +225,21 @@ function searchButtonSplash() {
 
 
     // AudioDB API AJAX Call (For Artist Info)
-    // $.ajax({
-    //     url: `http://www.theaudiodb.com/api/v1/json/195003/search.php?s=${searchNamePlus}`,
-    //     method: "GET",
-    // }).then(function (response) {
+    $.ajax({
+        url: `http://www.theaudiodb.com/api/v1/json/195003/search.php?s=${searchNamePlus}`,
+        method: "GET",
+    }).then(function (response) {
 
-    //     var artistName = response.artists[0].strArtist;
-    //     var artistThumbURL = response.artists[0].strArtistThumb;
-    //     var artistDesc = response.artists[0].strBiographyEN;
+        var artistName = response.artists[0].strArtist;
+        var artistThumbURL = response.artists[0].strArtistThumb;
+        var artistDesc = response.artists[0].strBiographyEN;
 
 
-    //     $(".info-slot-image").css("background-image", `url("${artistThumbURL}")`);
-    //     $(".info-slot-image-name").text(artistName);
-    //     $(".info-desc-box").text(artistDesc);
+        $(".info-slot-image").css("background-image", `url("${artistThumbURL}")`);
+        $(".info-slot-image-name").text(artistName);
+        $(".info-desc-box").text(artistDesc);
 
-    // });
+    });
 
 
     // NewsAPI AJAX Call
