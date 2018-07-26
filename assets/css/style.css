@@ -6,7 +6,9 @@
 	--primaryColorDark: #1c3e67;
 	--primaryColorLight: #4e88ce;
 	--secondaryColor: #5f4b8b;
+	--secondaryColorOpacity: #5f4b8ba6;
 	--secondaryColorLight: #8570b2;
+	--secondaryColorLightOpacity: #8570b29a;
 	--accentColor: #E47127;
 	--accentColorLight: #ea8f54;
 	--softWhiteColor: #F7F7F0;
@@ -373,27 +375,28 @@ footer {
 /* Media Queries */
 
 
+
 /* Smartphone media queries */
 
 @media only screen and (max-width:480px) and (min-width:320px) {
 
-	#info-box, #discography, .show-container, .news-container {
+	#info-box, #discography-main, .show-container, .news-container {
 		box-shadow: 0px 0px 10px 1px inset var(--secondaryColorLight);
 	}
 
-	#info-box:hover, #discography:hover, .show-container:hover, .news-container:hover {
-		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	#info-box:hover, #discography-main:hover, .show-container:hover, .news-container:hover {
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19), 0px 0px 10px 1px inset var(--secondaryColorLightOpacity);
 	}
 
 	body {
-		background: var(--softGreyColor);
+		background-color: var(--secondaryColorOpacity);
 	}
 
 	.info-slot-image {
 		background-size: cover;
 	}
 
-	#info-box, #discography, .show-container {
+	#info-box, #discography-main, .show-container {
 		margin-top: 4%;
 		margin-bottom: 4%;
 	}
@@ -402,6 +405,7 @@ footer {
 	}
 
 	#all-content {
+		background-color: var(--secondaryColorOpacity);
 		margin-left: 1%;
 		margin-right: 1%;
 	}
@@ -413,12 +417,12 @@ footer {
 @media only screen and (max-width: 812px) and (min-width:481px) {
 
 
-	#info-box, #discography, .show-container, .news-container {
+	#info-box, #discography-main, .show-container, .news-container {
 		box-shadow: 0px 0px 10px 1px inset var(--secondaryColorLight);
 	}
 
-	#info-box:hover, #discography:hover, .show-container:hover, .news-container:hover {
-		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	#info-box:hover, #discography-main:hover, .show-container:hover, .news-container:hover {
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19), 0px 0px 10px 1px inset var(--secondaryColorLightOpacity);
 	}
 
 	body {
@@ -429,7 +433,7 @@ footer {
 		background-size: cover;
 	}
 
-	#info-box, #discography, .show-container {
+	#info-box, #discography-main, .show-container {
 		margin-top: 4%;
 		margin-bottom: 4%;
 	}
@@ -438,7 +442,7 @@ footer {
 	}
 
 	#all-content {
-		background: var(--darkGreyColor);
+		background-color: var(--secondaryColorOpacity);
 		margin-left: 5%;
 		margin-right: 5%;
 	}
@@ -448,12 +452,12 @@ footer {
 
 @media only screen and (min-width:813px) {
 
-	#info-box, #discography, .show-container, .news-container {
+	#info-box, #discography-main, .show-container, .news-container {
 		box-shadow: 0px 0px 10px 1px inset var(--secondaryColorLight);
 	}
 
-	#info-box:hover, #discography:hover, .show-container:hover, .news-container:hover {
-		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	#info-box:hover, #discography-main:hover, .show-container:hover, .news-container:hover {
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19), 0px 0px 10px 1px inset var(--secondaryColorLightOpacity);
 	}
 
 	body {
@@ -462,13 +466,13 @@ footer {
 		background-size: cover;
 	}
 
-	#info-box, #discography, .show-container {
+	#info-box, #discography-main, .show-container {
 		margin-top: 4%;
 		margin-bottom: 4%;
 	}
 
 	#all-content {
-		background-color: rgba(128, 223, 247, 0.623);
+		background-color: var(--secondaryColorOpacity);
 		margin-left: 20%;
 		margin-right: 20%;
 	}
@@ -482,12 +486,12 @@ footer {
 /* media queries for HD - 2K screens */
 @media only screen and (min-width:1280px) {
 
-	#info-box, #discography, .show-container, .news-container {
+	#info-box, #discography-main, .show-container, .news-container {
 		box-shadow: 0px 0px 10px 1px inset var(--secondaryColorLight);
 	}
 
-	#info-box:hover, #discography:hover, .show-container:hover, .news-container:hover {
-		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	#info-box:hover, #discography-main:hover, .show-container:hover, .news-container:hover {
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19), 0px 0px 10px 1px inset var(--secondaryColorLightOpacity);
 	}
 
 	body {
@@ -496,13 +500,13 @@ footer {
 		background-size: cover;
 	}
 
-	#info-box, #discography, .show-container {
+	#info-box, #discography-main, .show-container {
 		margin-top: 4%;
 		margin-bottom: 4%;
 	}
 
 	#all-content {
-		background-color: rgba(128, 223, 247, 0.623);
+		background-color: var(--secondaryColorOpacity);
 		margin-left: 20%;
 		margin-right: 20%;
 	}
@@ -517,12 +521,12 @@ footer {
 
 @media only screen and (min-width:3840px) {
 
-	#info-box, #discography, .show-container, .news-container {
+	#info-box, #discography-main, .show-container, .news-container {
 		box-shadow: 0px 0px 10px 1px inset var(--secondaryColorLight);
 	}
 
-	#info-box:hover, #discography:hover, .show-container:hover, .news-container:hover {
-		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	#info-box:hover, #discography-main:hover, .show-container:hover, .news-container:hover {
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19), 0px 0px 10px 1px inset var(--secondaryColorLightOpacity);
 	}
 
 	body {
@@ -531,13 +535,13 @@ footer {
 		background-size: cover;
 	}
 
-	#info-box, #discography, .show-container {
+	#info-box, #discography-main, .show-container {
 		margin-top: 4%;
 		margin-bottom: 4%;
 	}
 
 	#all-content {
-		background-color: rgba(128, 223, 247, 0.623);
+		background-color: var(--secondaryColorOpacity);
 		margin-left: 20%;
 		margin-right: 20%;
 	}
