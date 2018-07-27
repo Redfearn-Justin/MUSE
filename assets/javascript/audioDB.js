@@ -75,7 +75,6 @@ $(document).ready(function () {
         })
             .then(function (response) {
                 audioDBArtistId = response.album[0].idArtist;
-                // console.log(audioDBArtistId);
                 var artistDiscographyByIdQuery = queryPrefix + "/album.php?i=" + audioDBArtistId;
 
                 //this calls discography by ID
@@ -104,11 +103,19 @@ function renderAlbums() {
     //for each album...
     for (var i = 0; i < albumIdTitleArray.length; i++) {
         var newAlbumDiv = $("<div>");
-        newAlbumDiv.addClass("slot-content-album")
-        newAlbumDiv.attr("data-coverURL", albumIdCoverURL[i]);
+        var albumArt = $("<img>");
+        var albumArtUrl = albumIdCoverURL[i];
+        albumArt.addClass("thumbnailArt");
+        albumArt.attr("src", albumArtUrl);
+        newAlbumDiv.prepend(albumArt);
+        var albumNameContainer = $("<p>");
+        albumNameContainer.addClass("albumNameStyle");
+        var albumNameText = albumIdTitleArray[i];
+        albumNameContainer.text(albumNameText);
+        newAlbumDiv.append(albumNameContainer);
+        newAlbumDiv.addClass("slot-content-album");
         var albumTrackQuery = queryPrefix + "/track.php?m=" + albumIdArray[i];
         newAlbumDiv.attr("data-query", albumTrackQuery);
-        newAlbumDiv.text(albumIdTitleArray[i]);
         newAlbumDiv.attr("data-state", "not-rendered");
         $("#discography").append(newAlbumDiv);
     }
@@ -133,9 +140,7 @@ $("#discography").on("click", ".slot-content-album", function (event) {
 
             //this generates track names into expandable track container
             .then(function (response) {
-                // console.log(response);
                 var results = response.track;
-                // console.log(results);
                 //for each track...
                 for (var ii = 0; ii < results.length; ii++) {
                     var newTrack = $("<div>");

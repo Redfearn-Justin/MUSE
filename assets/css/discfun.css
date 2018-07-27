@@ -32,3 +32,14 @@
     cursor: pointer;
     background-color: goldenrod;
 }
+    
+.thumbnailArt {
+    height: 51px;
+    width: auto;
+    float: left;
+}
+
+.noInput {
+    border-color: red;
+    background-color: pink;
+}
