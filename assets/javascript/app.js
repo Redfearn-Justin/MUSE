@@ -16,12 +16,12 @@ $(document).on("click", ".show-buy-tickets", function () {
     window.open(showBuyTicketURL);
 });
 
-$("#search-button-x").on("click", function (event) {
+$(".search-button-x").on("click", function (event) {
     event.preventDefault();
-    $("#myInput").val("");
+    $(".myInput").val("");
 });
 
-$("#search-button-submit").on("click", function (event) {
+$(".search-button-submit").on("click", function (event) {
     event.preventDefault();
 
     $("#no-upcoming-show").empty();
@@ -29,8 +29,9 @@ $("#search-button-submit").on("click", function (event) {
     $("#show-content-for-hide").show();
     $("#news-content-for-hide").show();
     $("#discography").empty();
+    $("#splash-screen").hide();
 
-    var value = $("#myInput").val().trim();
+    var value = $(".myInput").val().trim();
     searchName = value
     searchNamePlus = value.split(' ').join('+');
     searchNameNoSpace = value.replace(/\s+/g, '');
@@ -48,7 +49,6 @@ $("#search-button-submit").on("click", function (event) {
             $("#show-content-for-hide").hide();
         } else {
 
-            console.log(response);
             var event = response._embedded.events[0];
             var eName = response._embedded.events[0].name;
             var eDate = response._embedded.events[0].dates.start.localDate;
