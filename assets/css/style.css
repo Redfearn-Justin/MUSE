@@ -382,7 +382,7 @@ footer {
 
 
 
-/* Smartphone media queries */
+/* Smartphone/avg tablet media queries */
 
 @media only screen and (max-width:812px) and (min-width:500px) {
 
@@ -406,8 +406,27 @@ footer {
 
 	body {
 		overflow: scroll;
-		background: url("https://media.giphy.com/media/xT8qB6DTAn4wLbd7Py/giphy.gif");
-		background-size: cover;
+		background: url("https://wallpaperaccess.com/full/221440.jpg");
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+	}
+
+	iframe {
+		height:240px;
+		width:426px;
+	}
+
+	.info-slot-image-name {
+		position: relative;
+		top:22%;
+	}
+
+	.info-slot-image {
+		height: 250px;
+	}
+
+	#main-container {
+		height: fit-content;
 	}
 
 	#info-box, #discography-main, .show-container {
@@ -440,8 +459,27 @@ footer {
 
 	body {
 		overflow: scroll;
-		background: url("https://media.giphy.com/media/xT8qB6DTAn4wLbd7Py/giphy.gif");
-		background-size: cover;
+		background: url("https://wallpaperaccess.com/full/221440.jpg");
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+	}
+
+	iframe {
+		height:315px;
+		width:560px;
+	}
+
+	.info-slot-image-name {
+		position: relative;
+		top: 50%;
+	}
+
+	.info-slot-image {
+		height: 400px;
+	}
+
+	#main-container {
+		height: fit-content;
 	}
 
 	#info-box, #discography-main, .show-container {
@@ -475,8 +513,27 @@ footer {
 
 	body {
 		overflow: scroll;
-		background: url("https://media.giphy.com/media/xT8qB6DTAn4wLbd7Py/giphy.gif");
-		background-size: cover;
+		background: url("https://wallpaperaccess.com/full/221440.jpg");
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+	}
+
+	iframe {
+		height:480px;
+		width:854px;
+	}
+
+	.info-slot-image-name {
+		position: relative;
+		top: 65%;
+	}
+
+	.info-slot-image {
+		height: 600px;
+	}
+
+	#main-container {
+		height: fit-content;
 	}
 
 	#info-box, #discography-main, .show-container {
