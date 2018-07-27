@@ -16,9 +16,9 @@ var queryPrefix = "http://www.theaudiodb.com/api/v1/json/" + keyAPI;
 $(document).ready(function () {
 
     //artist details AJAX
-    $("#search-bar").on("click", "#search-button-submit", function (event) {
+    $(".search-container").on("click", ".search-button-submit", function (event) {
         event.preventDefault();
-        artistSearch = $("#myInput").val().trim();
+        artistSearch = $(".myInput").val().trim();
         var artistDetailQuery = queryPrefix + "/search.php?s=" + artistSearch;
 
         $.ajax({
@@ -28,19 +28,19 @@ $(document).ready(function () {
             .then(function (response) {
                 var results = response.artists[0];
                 // console.log(results);
-                var artistName = results.strArtist;
-                $(".info-slot-image-name").text(artistName);
-                var artistThumb = results.strArtistThumb;
-                var artistBiography = results.strBiographyEN;
-                $(".info-desc-box").text(artistBiography);
-                var artistGenre = results.strGenre;
-                $(".genre").text(artistGenre);
-                var artistOrigin = results.strCountry;
-                $(".artist-origin").text(artistOrigin)
-                var artistStartYear = results.intFormedYear;
-                $(".artist-start-year").text(artistStartYear);
-                var artistMusicMood = results.strMood;
-                $(".music-mood").text(artistMusicMood);
+                    var artistName = results.strArtist;
+                    $(".info-slot-image-name").text(artistName);
+                    var artistThumb = results.strArtistThumb;
+                    var artistBiography = results.strBiographyEN;
+                    $(".info-desc-box").text(artistBiography);
+                    var artistGenre = results.strGenre;
+                    $(".genre").text(artistGenre);
+                    var artistOrigin = results.strCountry;
+                    $(".artist-origin").text(artistOrigin)
+                    var artistStartYear = results.intFormedYear;
+                    $(".artist-start-year").text(artistStartYear);
+                    var artistMusicMood = results.strMood;
+                    $(".music-mood").text(artistMusicMood);
             })
     });
 
@@ -64,7 +64,8 @@ $(document).ready(function () {
     // });
 
     // //album details AJAX
-    $("#search-bar").on("click", "#search-button-submit", function (event) {
+    $(".search-container").on("click", ".search-button-submit", function (event) {
+        console.log("ajaxing2");
         event.preventDefault();
         var artistAudioDBIdQuery = queryPrefix + "/searchalbum.php?s=" + artistSearch;
 
@@ -74,6 +75,7 @@ $(document).ready(function () {
             method: "GET"
         })
             .then(function (response) {
+                console.log("ajaxing3");
                 audioDBArtistId = response.album[0].idArtist;
                 var artistDiscographyByIdQuery = queryPrefix + "/album.php?i=" + audioDBArtistId;
 
@@ -84,6 +86,7 @@ $(document).ready(function () {
                 })
                     //this pushes album ids and titles to respective arrays
                     .then(function (response) {
+                        console.log("ajaxing4");
                         // console.log(response);
                         var results = response.album;
                         for (i = 0; i < results.length; i++) {
@@ -123,7 +126,7 @@ function renderAlbums() {
 
 $("#discography").on("click", ".slot-content-album", function (event) {
     event.preventDefault();
-        var state = $(this).attr("data-state");
+    var state = $(this).attr("data-state");
     if (state === "not-rendered") {
         var albumTrackQuery = $(this).attr("data-query");
         var albumDiv = $(this);
