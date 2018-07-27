@@ -1,5 +1,6 @@
 var albumNameButton = $(".slot-content-album");
 
+//track list expand/collapse
 $("#discography").on("click", ".slot-content-album", function (event) {
     var trackExpand = $(this).attr("data-expand")
     var content = $(this).children();
@@ -29,16 +30,3 @@ for (j = 0; j < coll2.length; j++) {
         }
     });
 }
-
-$("#search-bar").on("click", "#search-button-submit", function (event) {
-    var inputBar = $("#myInput");
-    var inputBarContent = inputBar.val().trim();
-    if (inputBarContent.length < 1) {
-    inputBar.addClass("noInput");
-    inputBar.attr("placeholder", "Required!");
-    }
-    else {
-        inputBar.removeClass("noInput");
-        inputBar.attr("placeholder", "Search");
-    }
-});
