@@ -8,6 +8,25 @@
     overflow: hidden;
 }
 
+.slot-content-album {
+    font-weight: bold;
+}
+
+.slot-content-album:hover  {
+    cursor: pointer;
+    background-color: #2D62A3;
+    font-weight: bold;
+    color: #F7F7F0;
+}
+
+.slot-content-song:hover  {
+    cursor: pointer;
+}
+    
+.slot-content-song {
+    background-color: #F7F7F0;
+}
+
 .thumbnailArt {
     height: 51px;
     width: auto;
