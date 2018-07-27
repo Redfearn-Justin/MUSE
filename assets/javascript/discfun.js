@@ -19,7 +19,7 @@ var coll2 = document.getElementsByClassName("info-desc-button");
 var j;
 
 for (j = 0; j < coll2.length; j++) {
-    coll2[j].addEventListener("click", function() {
+    coll2[j].addEventListener("click", function () {
         this.classList.toggle("active");
         var content = this.nextElementSibling;
         if (content.style.display === "block") {
@@ -29,3 +29,16 @@ for (j = 0; j < coll2.length; j++) {
         }
     });
 }
+
+$("#search-bar").on("click", "#search-button-submit", function (event) {
+    var inputBar = $("#myInput");
+    var inputBarContent = inputBar.val().trim();
+    if (inputBarContent.length < 1) {
+    inputBar.addClass("noInput");
+    inputBar.attr("placeholder", "Required!");
+    }
+    else {
+        inputBar.removeClass("noInput");
+        inputBar.attr("placeholder", "Search");
+    }
+});
