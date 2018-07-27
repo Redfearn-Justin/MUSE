@@ -12,27 +12,21 @@
     font-weight: bold;
 }
 
-.slot-content-song {
-    color: whitesmoke;
-    background-color: blueviolet;
-}
-
-.expandable-album {
-    margin-bottom: 15px;
-}
-
 .slot-content-album:hover  {
     cursor: pointer;
-    background-color: cornflowerblue;
+    background-color: #2D62A3;
     font-weight: bold;
-    color: whitesmoke;
+    color: #F7F7F0;
 }
 
 .slot-content-song:hover  {
     cursor: pointer;
-    background-color: goldenrod;
 }
     
+.slot-content-song {
+    background-color: #F7F7F0;
+}
+
 .thumbnailArt {
     height: 51px;
     width: auto;
