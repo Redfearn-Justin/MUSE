@@ -25,7 +25,7 @@
 // });
 
 $(".search-bar").on("click", ".search-button-submit", function (event) {
-    var inputBar = $("#myInput");
+    var inputBar = $(".myInput");
     var inputBarContent = inputBar.val().trim();
     if (inputBarContent.length < 1) {
         inputBar.addClass("noInput");
