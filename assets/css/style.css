@@ -46,7 +46,9 @@ body {
 	margin: 0 auto;
 }
 
-
+.z-index99 {
+	z-index: 99;
+}
 
 
 
@@ -346,8 +348,6 @@ body {
 	height: 30px;
 	border: 1px solid black;
 }
-
-
 
 
 
