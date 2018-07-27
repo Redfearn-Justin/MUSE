@@ -7,3 +7,28 @@
     display: none;
     overflow: hidden;
 }
+
+.slot-content-album {
+    font-weight: bold;
+}
+
+.slot-content-song {
+    color: whitesmoke;
+    background-color: blueviolet;
+}
+
+.expandable-album {
+    margin-bottom: 15px;
+}
+
+.slot-content-album:hover  {
+    cursor: pointer;
+    background-color: cornflowerblue;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+.slot-content-song:hover  {
+    cursor: pointer;
+    background-color: goldenrod;
+}
