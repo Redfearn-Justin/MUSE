@@ -8,36 +8,37 @@
 	height: 100%;
 	width: 100%;
 	z-index: 1000;
-	top: 0;
+	top: 56px;
     left: 0;
     text-align: center;
 }
 
 
-#splash-logo {
-    margin: 0 auto;
-    margin-top: 10%;
-    background-color: #8570b2;
-    border-radius: 5px;
-    text-align: 0 auto;
-    height: 80px;
-    width: 80px;
-    line-height: 50px;
-    color: white;
-    box-shadow: 0 0 8px #000;
-}
-
 #splash-title {
     position: relative;
     z-index: 1001;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 10%;
     font-size: 8vmin;
     line-height: 10vmin;
     color: white;
     text-align: center;
     text-shadow: 0 2px 10px #202020;
 }
+
+#splash-title-2 {
+    position: relative;
+    z-index: 1002;
+    margin: 0 auto;
+    margin-top: 10px;
+    font-size: 6vmin;
+    line-height: 10vmin;
+    color: white;
+    text-align: center;
+    text-shadow: 0 2px 5px #202020;
+}
+
+
 
 #myInputSplash {
 	float: left;
@@ -48,6 +49,14 @@
     width: 40%;
     margin: 0 auto;
     margin-top: 15px;
+}
+
+@media only screen and (max-width:500px) and (min-width: 200px) {
+ 
+    #splash-title {
+        margin-top: 30%;
+    }
+
 }
 
 
@@ -63,25 +72,14 @@
         font-size: 10vmin;
         line-height: 10vmin;
         text-shadow: 0 2px 5px #202020;
+        margin-top: 20%;
     }
 
-    #splash-logo {
-        margin: 0 auto;
+
+}
+
+@media only screen and (min-width: 814px) {
+    #splash-title {
         margin-top: 15%;
-        background-color: #8570b2;
-        border-radius: 5px;
-        text-align: 0 auto;
-        height: 50px;
-        width: 50px;
-        line-height: 50px;
-        color: white;
-        box-shadow: 0 0 5px #202020;
     }
-
-    #splash-search-bar {
-        width: 80%;
-        margin: 0 auto;
-        margin-top: 15px;
-    }
-
 }

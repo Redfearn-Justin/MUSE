@@ -24,15 +24,23 @@
 //         })
 // });
 
+$("#failed-search").hide();
+
 $(".search-bar").on("click", ".search-button-submit", function (event) {
     var inputBar = $(".myInput");
     var inputBarContent = inputBar.val().trim();
     if (inputBarContent.length < 1) {
         inputBar.addClass("noInput");
         inputBar.attr("placeholder", "Required!");
+        $("#main-container").hide();
+        $("#failed-search").show();
+        $("footer").css("position", "absolute")
     }
     else {
         inputBar.removeClass("noInput");
         inputBar.attr("placeholder", "Search");
+        $("#main-container").show();
+        $("#failed-search").hide();
+        $("footer").css("position", "relative")
     }
 });
