@@ -46,7 +46,9 @@ body {
 	margin: 0 auto;
 }
 
-
+.z-index99 {
+	z-index: 99;
+}
 
 
 
