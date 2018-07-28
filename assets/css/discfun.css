@@ -14,7 +14,7 @@
 
 .slot-content-album:hover  {
     cursor: pointer;
-    background-color: #2D62A3;
+    background-color: #5f4b8b;
     font-weight: bold;
     color: #F7F7F0;
 }
@@ -28,6 +28,7 @@
 }
 
 .thumbnailArt {
+    padding-top: 1px;
     height: 51px;
     width: auto;
     float: left;
