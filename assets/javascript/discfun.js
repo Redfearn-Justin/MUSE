@@ -3,7 +3,7 @@ var albumNameButton = $(".slot-content-album");
 //track list expand/collapse
 $("#discography").on("click", ".slot-content-album", function (event) {
     var trackExpand = $(this).attr("data-expand")
-    var content = $(this).children();
+    var content = $(".expandable-album");
     if (trackExpand === "expanded") {
         // console.log("collapsing");
         $(this).attr("data-expand", "collapsed");

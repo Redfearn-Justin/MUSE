@@ -117,7 +117,6 @@ $("#search-btn-sub").on("click", function (event) {
         method: "GET",
     }).then(function (response) {
 
-        console.log(response);
         if (response.artists == null) {
             inputBar.addClass("noInput");
             inputBar.attr("placeholder", "Required!");
@@ -222,7 +221,6 @@ $("#search-btn-sub").on("click", function (event) {
                 method: "GET"
             }).then(function (response) {
 
-                console.log("ajaxing3");
                 audioDBArtistId = response.album[0].idArtist;
                 var artistDiscographyByIdQuery = queryPrefix + "/album.php?i=" + audioDBArtistId;
 
@@ -234,7 +232,6 @@ $("#search-btn-sub").on("click", function (event) {
                     //this pushes album ids and titles to respective arrays
                     .then(function (response) {
 
-                        console.log("ajaxing4");
                         // console.log(response);
                         var results = response.album;
                         for (i = 0; i < results.length; i++) {
