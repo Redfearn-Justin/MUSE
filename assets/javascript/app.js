@@ -16,7 +16,7 @@ var albumIdTitleArray = [];
 var albumIdReleaseYearArray = [];
 var albumIdCoverURL = [];
 
-var queryPrefix = "http://www.theaudiodb.com/api/v1/json/" + keyAPI;
+var queryPrefix = "https://www.theaudiodb.com/api/v1/json/" + keyAPI;
 
 function renderAlbums() {
     //for each album...
@@ -113,7 +113,7 @@ $("#search-btn-sub").on("click", function (event) {
 
     // AudioDB API AJAX Call (For Artist Info)
     $.ajax({
-        url: `http://www.theaudiodb.com/api/v1/json/195003/search.php?s=${searchNamePlus}`,
+        url: queryPrefix + `/search.php?s=${searchNamePlus}`,
         method: "GET",
     }).then(function (response) {
 
@@ -134,7 +134,7 @@ $("#search-btn-sub").on("click", function (event) {
             $(".info-slot-image").css("background-image", `url("${artistThumbURL}")`);
             $(".info-slot-image-name").text(artistName);
             $(".info-desc-box").text(artistDesc);
-
+            
             // TicketMaster API AJAX Call
             $.ajax({
                 url: "https://app.ticketmaster.com/discovery/v2/events.json?format=ajax&keyword=" + searchNamePlus + "&size=1&apikey=ZgJGOucLYGUGeSJ6U1KvDW1tOCTObkMy",
