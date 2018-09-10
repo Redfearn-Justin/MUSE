@@ -19,7 +19,7 @@
     z-index: 1001;
     margin: 0 auto;
     margin-top: 10%;
-    font-size: 8vmin;
+    font-size: 5vmin;
     line-height: 10vmin;
     color: white;
     text-align: center;
@@ -31,8 +31,7 @@
     z-index: 1002;
     margin: 0 auto;
     margin-top: 10px;
-    font-size: 6vmin;
-    line-height: 10vmin;
+    font-size: 3vmin;
     color: white;
     text-align: center;
     text-shadow: 0 2px 5px #202020;
@@ -69,7 +68,7 @@
 
     #splash-title {
         font-size: 8vmin;
-        font-size: 10vmin;
+        font-size: 6vmin;
         line-height: 10vmin;
         text-shadow: 0 2px 5px #202020;
         margin-top: 20%;

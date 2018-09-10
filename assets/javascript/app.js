@@ -18,7 +18,14 @@ var albumIdCoverURL = [];
 
 var queryPrefix = "https://www.theaudiodb.com/api/v1/json/" + keyAPI;
 
+function millisToMinutesAndSeconds(millis) {
+    var minutes = Math.floor(millis / 60000);
+    var seconds = ((millis % 60000) / 1000).toFixed(0);
+    return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
+}
+
 function renderAlbums() {
+    var divOffset = 0;
     //for each album...
     for (var i = 0; i < albumIdTitleArray.length; i++) {
         var newAlbumDiv = $("<div>");
@@ -33,6 +40,8 @@ function renderAlbums() {
         albumNameContainer.text(albumNameText);
         newAlbumDiv.append(albumNameContainer);
         newAlbumDiv.addClass("slot-content-album");
+        newAlbumDiv.attr("style", `bottom: ${divOffset}px`);
+        divOffset = divOffset += 2;
         var albumTrackQuery = queryPrefix + "/track.php?m=" + albumIdArray[i];
         newAlbumDiv.attr("data-query", albumTrackQuery);
         newAlbumDiv.attr("data-state", "not-rendered");
@@ -75,12 +84,38 @@ $("#discography").on("click", ".slot-content-album", function (event) {
 
             //this generates track names into expandable track container
             .then(function (response) {
+                var songOffset = 0;
                 var results = response.track;
+                console.log(response);
                 //for each track...
                 for (var ii = 0; ii < results.length; ii++) {
+                    var trackNumberResult = results[ii].intTrackNumber;
+                    var trackNumber = $("<div>");
+                    trackNumber.addClass("track-number");
+                    trackNumber.text(trackNumberResult);
+
+                    var trackUnformatted = results[ii].intDuration;
+                    var trackTime = $("<div>");
+                    trackTime.addClass("track-time");
+
+                    if (trackUnformatted == 0) {
+                        trackTime.text("-:--");
+                    } else {
+                        var trackFormatted = millisToMinutesAndSeconds(trackUnformatted);
+                        trackTime.text(trackFormatted);
+                    }
+
+                    var trackName = $("<div>");
+                    trackName.addClass("track-name");
+                    trackName.text(results[ii].strTrack);
+
                     var newTrack = $("<div>");
                     newTrack.addClass("slot-content-song");
-                    newTrack.text(results[ii].strTrack);
+                    newTrack.attr("style",`bottom: ${songOffset}px`);
+                    songOffset++
+                    newTrack.append(trackNumber);
+                    newTrack.append(trackName);
+                    newTrack.append(trackTime);
                     trackContainer.append(newTrack);
                 }
             })
@@ -105,7 +140,7 @@ $("#search-btn-sub").on("click", function (event) {
     albumIdCoverURL = [];
 
     var inputBar = $(".myInput");
-    
+
     var value = $("#search-input").val().trim();
     searchName = value
     searchNamePlus = value.split(' ').join('+');
@@ -134,7 +169,7 @@ $("#search-btn-sub").on("click", function (event) {
             $(".info-slot-image").css("background-image", `url("${artistThumbURL}")`);
             $(".info-slot-image-name").text(artistName);
             $(".info-desc-box").text(artistDesc);
-            
+
             // TicketMaster API AJAX Call
             $.ajax({
                 url: "https://app.ticketmaster.com/discovery/v2/events.json?format=ajax&keyword=" + searchNamePlus + "&size=1&apikey=ZgJGOucLYGUGeSJ6U1KvDW1tOCTObkMy",
@@ -231,7 +266,7 @@ $("#search-btn-sub").on("click", function (event) {
                 })
                     //this pushes album ids and titles to respective arrays
                     .then(function (response) {
-
+                        console.log(response);
                         // console.log(response);
                         var results = response.album;
                         for (i = 0; i < results.length; i++) {

@@ -14,9 +14,8 @@
 
 .slot-content-album:hover  {
     cursor: pointer;
-    background-color: #5f4b8b;
+    background-image: linear-gradient(to right, #F7F7F0 , #F7F7F0, #F7F7F0, #59429b);
     font-weight: bold;
-    color: #F7F7F0;
 }
 
 .slot-content-song:hover  {
@@ -28,7 +27,7 @@
 }
 
 .thumbnailArt {
-    padding-top: 1px;
+    padding: 4px;
     height: 51px;
     width: auto;
     float: left;
