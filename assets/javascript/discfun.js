@@ -2,16 +2,20 @@ var albumNameButton = $(".slot-content-album");
 
 //track list expand/collapse
 $("#discography").on("click", ".slot-content-album", function (event) {
-    var trackExpand = $(this).attr("data-expand")
-    var content = $(".expandable-album");
+    
+    var trackExpand = $(this).attr("data-expand");
+    //BUG
+    var content = $(this).children(".expandable-album");
+
     if (trackExpand === "expanded") {
-        // console.log("collapsing");
+
         $(this).attr("data-expand", "collapsed");
         content.css("display", "none");
     }
+
     else {
+
         $(this).attr("data-expand", "expanded");
-        // console.log("expanding");
         content.css("display", "block");
     }
 });
