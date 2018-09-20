@@ -1,2 +1,4 @@
-# Project1
-Group #3 Project 1
+# MUSE - Music Artist Search
+*Keep up with your favorite artists*
+
+

@@ -4,16 +4,16 @@
 <head>
 
 	<!-- Favicon Link -->
-	<link rel="icon" href="https://image.winudf.com/v2/image/Y29tLnhvZXhwZXJzc29sYWxvaWRzYXMuc3BsYXNoc2NyZWVuX2ljb25fMF9lYWZhMzIwOQ/icon.png?w=170&fakeurl=1&type=.png">
+	<link rel="icon" href="assets/images/favicon.png">
 
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!-- Other meta tags -->
-	<title>MUSE</title>
-	<meta name="author" content="Group 3">
-	<meta name="description" content="Music artist search web app">
+	<title>MUSE Artist Search</title>
+	<meta name="author" content="UCD Bootcamp group 3 - Gavin, Joe, Justin, Collin">
+	<meta name="description" content="MUSE - Music artist search web app">
 
 	<!--Fonts-->
 	<link href="https://fonts.googleapis.com/css?family=Nunito|Viga" rel="stylesheet">
@@ -27,38 +27,49 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/discfun.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/splashscreen.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/buttons.css">
 
 </head>
 
 <body>
-	
-
 
 	<!-- Splash -->
 	<div id="splash-screen">
+
 		<div id="splash-title">Keep up with your favorite artists</div>
 		<div id="splash-title-2">Search to begin</div>
+
 	</div>
 
 	<!-- Header/Banner -->
-	<nav class="navbar sticky-top navbar-light justify-content-center">
-		<a class="navbar-brand text-white" href="#">
-		  <img src="https://image.winudf.com/v2/image/Y29tLnhvZXhwZXJzc29sYWxvaWRzYXMuc3BsYXNoc2NyZWVuX2ljb25fMF9lYWZhMzIwOQ/icon.png?w=170&fakeurl=1&type=.png" width="30" height="30" class="d-inline-block align-top" alt="">
-		  MUSE
-		</a>
-		<div class="search-bar search-container search-bar-width clearfix">
-			<div id="search-btn-sub" class="search-button-submit search-buttons br-left-button">
-				<i class="fa fa-search" aria-hidden="true"></i>
-			</div>
-			<input id="search-input" class="myInput input-ol form-control striaght-box" type="text" placeholder="Search">
-			<div class="search-button-x search-buttons br-right-button">X</div>
+	<nav class="nav-bar">
+
+
+		<div class="logo-box">
+			<a class="navbar-brand text-white" href="./index.html">
+				<img style="position: relative; top: 10px; left: 10px; float: left;" src="assets/images/muse_logo.svg" height="30" class="d-inline-block align-top"
+				 alt="">
+			</a>
 		</div>
+
+		<div class="search-box clearfix">
+			<div class="search-bar search-container search-bar-width clearfix">
+				<div id="search-btn-sub" class="search-button-submit search-buttons br-left-button">
+					<i class="fa fa-search" aria-hidden="true"></i>
+				</div>
+				<input id="search-input" class="myInput input-ol form-control striaght-box" type="text" placeholder="Search">
+				<div class="search-button-x search-buttons br-right-button">X</div>
+			</div>
+		</div>
+
+
 	</nav>
 
 	<div id="all-content">
 
-		<div class="spaceFiller"></div>
+		<div class="spaceFillerTop"></div>
 
+		<!-- Failed search bar -->
 		<div id="failed-search">Please search for a valid artist.</div>
 
 		<div id="main-container">
@@ -71,35 +82,36 @@
 				<div class="info-slot-content">
 					<div class="info-row clearfix">
 						<div class="info-50 clearfix">
-							<div class="info-50-25">O</div>
+							<div class="info-50-25">
+								<img style="position: relative; bottom: 2px" src="assets/images/genre.svg" height="10" alt="">
+							</div>
 							<div class="info-50-75 genre">placeholder</div>
 						</div>
 						<div class="info-50 clearfix">
-							<div class="info-50-25">O</div>
-							<div class="info-50-75 artist-start-year">placeholder</div>
+							<div class="info-50-75 artist-start-year" style="text-align: right">placeholder</div>
+							<div class="info-50-25">
+								<img style="position: relative; bottom: 2px" src="assets/images/debut.svg" height="10" alt="">
+							</div>
 						</div>
 					</div>
 					<div class="info-row clearfix">
 						<div class="info-50 clearfix">
-							<div class="info-50-25">O</div>
+							<div class="info-50-25">
+								<img style="position: relative; bottom: 2px" src="assets/images/from.svg" height="10" alt="">
+							</div>
 							<div class="info-50-75 artist-origin">placeholder</div>
 						</div>
 						<div class="info-50 clearfix">
-							<div class="info-50-25">O</div>
-							<div class="info-50-75 music-mood">placeholder</div>
+							<div class="info-50-75 music-mood" style="text-align: right">placeholder</div>
+							<div class="info-50-25">
+								<img style="position: relative; bottom: 2px" src="assets/images/mood.svg" height="10" alt="">
+							</div>
 						</div>
 					</div>
 					<div class="info-description">
 						<div class="info-desc-button">Artist Description</div>
 						<div id="desc-list">
-							<div class="info-desc-box">Placeholder description of the artist goes here. It's going to be pretty long, like probably longer than this. I'm
-								going to keep typing until I feel like it is long enough, which has not happened yet. Pretty soon, I would guess.
-								Maybe now? No, perhaps not. And yet just like that, it's over. Description of the artist goes here. It's going to
-								be pretty long, like probably longer than this. I'm going to keep typing until I feel like it is long enough, which
-								has not happened yet. Pretty soon, I would guess. Maybe now? No, perhaps not. And yet just like that, it's over.
-								Description of the artist goes here. It's going to be pretty long, like probably longer than this. I'm going to keep
-								typing until I feel like it is long enough, which has not happened yet. Pretty soon, I would guess. Maybe now? No,
-								perhaps not. And yet just like that, it's over.</div>
+							<div class="info-desc-box"></div>
 						</div>
 
 					</div>
@@ -161,10 +173,6 @@
 				</div>
 			</div>
 
-
-
-
-
 			<!-- New Card -->
 			<!-- <div class="XXXXX-container">
 			<div class="slot-title">Title</div>
@@ -172,16 +180,16 @@
 			</div> -->
 
 		</div>
-
 		<div class="spaceFiller"></div>
-
 	</div>
-
 
 	<!--footer-->
 	<footer>
 
-		©
+		<span style="color: #fff; margin-right: 10px;">2018</span>
+		<img style="position: relative; top: 10px" src="assets/images/muse_logo_m.svg" height="30" class="d-inline-block align-top"
+		 alt="">
+		<a style="color: #fff; margin-left: 10px;" href="https://github.com/gavbax99/MUSE-Artist-Search">GitHub</a>
 
 	</footer>
 
